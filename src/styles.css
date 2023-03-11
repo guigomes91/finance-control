@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-first: #CE7CE3;
+  --color-secondary: #9A30B5;
+  --color-warn: #f10707;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-toolbar {
+  background-color: var(--color-secondary);
+}
