@@ -1,0 +1,8 @@
+.mat-mdc-menu-trigger {
+  margin-left: auto;
+  vertical-align: text-bottom;
+}
+
+.custom-toolbar {
+  background-color: var(--color-secondary);
+}

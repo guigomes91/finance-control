@@ -1,5 +1,31 @@
 <mat-toolbar class="custom-toolbar">
-  <mat-icon matBadge="15" matBadgeColor="warn" aria-hidden="false" aria-label="Home" fontIcon="home"></mat-icon>
-  <span style="margin-left: 2em;">Aplicativo de Controle Financeiro</span>
+  <mat-icon
+    matBadge="15"
+    matBadgeColor="warn"
+    aria-hidden="false"
+    aria-label="Home"
+    fontIcon="account_balance"
+  ></mat-icon>
+  <span style="margin-left: 1em; color: white;">Aplicativo de Controle Financeiro</span>
+
+  <mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+    <mat-icon>more_vert</mat-icon>
+  </mat-icon-button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dark_mode</mat-icon>
+      <span>Modo noturno</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>file_download_on</mat-icon>
+      <span>Download</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+  </mat-menu>
+
 </mat-toolbar>
+<router-outlet></router-outlet>
 
