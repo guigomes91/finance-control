@@ -1,4 +1,4 @@
-<mat-table [dataSource]="accounts">
+<mat-table [dataSource]="dataSource">
   <!-- Description Column -->
   <ng-container matColumnDef="description">
     <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
@@ -8,13 +8,13 @@
   <!-- Due Column -->
   <ng-container matColumnDef="due">
     <mat-header-cell *matHeaderCellDef> Vencimento </mat-header-cell>
-    <mat-cell *matCellDef="let account"> {{ account.due }} </mat-cell>
+    <mat-cell *matCellDef="let account"> {{ account.due | date : 'dd/MM/yyyy HH:mm' }} </mat-cell>
   </ng-container>
 
   <!-- Payment Column -->
   <ng-container matColumnDef="payment">
     <mat-header-cell *matHeaderCellDef> Pagamento </mat-header-cell>
-    <mat-cell *matCellDef="let account"> {{ account.payment }} </mat-cell>
+    <mat-cell *matCellDef="let account"> {{ account.payment | date : 'dd/MM/yyyy HH:mm' }} </mat-cell>
   </ng-container>
 
   <!-- Portion Column -->
