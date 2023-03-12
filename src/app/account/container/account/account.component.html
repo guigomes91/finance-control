@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title style="font-size: 12px;">Consulta de Contas</mat-card-title>
+  </mat-card-header>
+  <div class="column-flex mat-elevation-z8">
+    <app-account-list>
+    </app-account-list>
+
+    <ng-template #loading>
+      <div class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
+  </div>
+</mat-card>
+
+

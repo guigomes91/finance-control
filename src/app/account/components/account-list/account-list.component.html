@@ -1,0 +1,46 @@
+<mat-table [dataSource]="accounts">
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.description }} </mat-cell>
+  </ng-container>
+
+  <!-- Due Column -->
+  <ng-container matColumnDef="due">
+    <mat-header-cell *matHeaderCellDef> Vencimento </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.due }} </mat-cell>
+  </ng-container>
+
+  <!-- Payment Column -->
+  <ng-container matColumnDef="payment">
+    <mat-header-cell *matHeaderCellDef> Pagamento </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.payment }} </mat-cell>
+  </ng-container>
+
+  <!-- Portion Column -->
+  <ng-container matColumnDef="portion">
+    <mat-header-cell *matHeaderCellDef> Parcela </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.portion }} </mat-cell>
+  </ng-container>
+
+  <!-- Amount Column -->
+  <ng-container matColumnDef="amount">
+    <mat-header-cell *matHeaderCellDef> Valor </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.amount }} </mat-cell>
+  </ng-container>
+
+  <!-- Type Plan Column -->
+  <ng-container matColumnDef="type">
+    <mat-header-cell *matHeaderCellDef> Plano de Conta </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.type.name }} </mat-cell>
+  </ng-container>
+
+  <!-- Status Column -->
+  <ng-container matColumnDef="status">
+    <mat-header-cell *matHeaderCellDef> Situação </mat-header-cell>
+    <mat-cell *matCellDef="let account"> {{ account.status }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
