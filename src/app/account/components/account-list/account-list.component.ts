@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { Account } from '../../../model/account/account';
 
 @Component({
@@ -9,6 +10,9 @@ import { Account } from '../../../model/account/account';
 export class AccountListComponent {
 
   @Input() accounts: Account[] = [];
+  @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
+  @Output() remove = new EventEmitter(false);
 
   displayedColumns: string[] = [
     'description',
@@ -19,4 +23,16 @@ export class AccountListComponent {
     'type',
     'status'
   ];
+
+  onAdd() {
+    this.add.emit(true);
+  }
+
+  onEdit(account: Account) {
+    this.edit.emit(account);
+  }
+
+  onDelete(account: Account) {
+    this.remove.emit(account);
+  }
 }
