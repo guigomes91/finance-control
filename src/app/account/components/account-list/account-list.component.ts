@@ -21,7 +21,8 @@ export class AccountListComponent {
     'portion',
     'amount',
     'type',
-    'status'
+    'status',
+    'actions'
   ];
 
   onAdd() {
