@@ -37,4 +37,10 @@ export class AccountComponent {
       data: errorMsg
     });
   }
+
+  onAdd() {}
+
+  onEdit(account: Account) {}
+
+  onDelete(account: Account) {}
 }
