@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
 
 import { Account } from '../../../model/account/account';
@@ -17,7 +18,9 @@ export class AccountComponent {
 
   constructor(
     private accountService: AccountService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.refresh();
   }
@@ -38,7 +41,9 @@ export class AccountComponent {
     });
   }
 
-  onAdd() {}
+  onAdd() {
+    this.router.navigate(['new'], {relativeTo: this.router});
+  }
 
   onEdit(account: Account) {}
 

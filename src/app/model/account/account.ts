@@ -7,7 +7,7 @@ export interface Account {
   payment: Date;
   portion: number;
   amount: number;
-  type: AccountPlan;
+  type: AccountPlan | null;
   description: string;
-  status: AccountStatus
+  status: AccountStatus | null
 }

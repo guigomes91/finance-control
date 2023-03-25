@@ -21,4 +21,8 @@ export class AccountService {
         tap(accounts => console.log(accounts))
       );
   }
+
+  loadById(id: string) {
+    return this.httpClient.get<Account>(`${this.API}/${id}`);
+  }
 }
