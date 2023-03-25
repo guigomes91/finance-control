@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AccountResolverComponent } from './account-resolver.component';
+import { AccountResolver } from './account.resolver';
 
 describe('AccountResolverComponent', () => {
-  let component: AccountResolverComponent;
-  let fixture: ComponentFixture<AccountResolverComponent>;
+  let component: AccountResolver;
+  let fixture: ComponentFixture<AccountResolver>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountResolverComponent ]
+      declarations: [ AccountResolver ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AccountResolverComponent);
+    fixture = TestBed.createComponent(AccountResolver);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

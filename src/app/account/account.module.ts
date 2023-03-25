@@ -8,14 +8,12 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AccountListComponent } from './components/account-list/account-list.component';
 import { AccountComponent } from './container/account/account.component';
 import { AccountFormComponent } from './components/account-form/account-form.component';
-import { AccountResolverComponent } from './guards/account-resolver/account-resolver.component';
 
 @NgModule({
   declarations: [
     AccountListComponent,
     AccountComponent,
-    AccountFormComponent,
-    AccountResolverComponent
+    AccountFormComponent
   ],
   imports: [
     CommonModule,

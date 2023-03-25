@@ -25,4 +25,8 @@ export class AccountService {
   loadById(id: string) {
     return this.httpClient.get<Account>(`${this.API}/${id}`);
   }
+
+  remove(id: string) {
+    return this.httpClient.delete(`${this.API}/${id}`).pipe(first());
+  }
 }
