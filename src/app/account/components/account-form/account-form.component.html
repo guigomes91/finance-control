@@ -1,1 +1,34 @@
-<p>account-form works!</p>
+<mat-card>
+
+  <mat-card-content>
+    <mat-toolbar color="primary">Detalhes da Conta</mat-toolbar>
+
+    <form [formGroup]="form" class="min-width">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Descrição" formControlName="description" #description>
+        <mat-hint align="end">{{description.value.length}} / 100</mat-hint>
+        <mat-error *ngIf="form.get('description')?.invalid">
+          {{getErrorMessage('name')}}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Data de Vencimento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Data de Pagamento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>

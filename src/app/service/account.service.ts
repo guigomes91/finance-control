@@ -29,4 +29,19 @@ export class AccountService {
   remove(id: string) {
     return this.httpClient.delete(`${this.API}/${id}`).pipe(first());
   }
+
+  save(record: Partial<Account>) {
+    if (record.id) {
+      return this.update(record);
+    }
+    return this.create(record);
+  }
+
+  private create(record: Partial<Account>) {
+    return this.httpClient.post<Account>(this.API, record).pipe(first());
+  }
+
+  private update(record: Partial<Account>) {
+    return this.httpClient.put<Account>(`${this.API}/${record.id}`, record).pipe(first());
+  }
 }
