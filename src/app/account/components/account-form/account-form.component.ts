@@ -21,7 +21,7 @@ export class AccountFormComponent implements OnInit {
       Validators.maxLength(100)]],
     due: [new Date()],
     payment: [new Date()],
-    portion: [0],
+    portion: [0, [Validators.required, Validators.pattern('^\\d+$')]],
     amount: [0]
   });
 

@@ -12,6 +12,16 @@
         </mat-error>
       </mat-form-field>
 
+      <mat-form-field appearance="outline">
+        <mat-label>Parcela</mat-label>
+        <input name="portion" formControlName="portion" type="number" min="1" step="1" matInput placeholder="Entre com a parcela.">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Total</mat-label>
+        <input name="amount" formControlName="amount" type="number" matInput placeholder="Entre com o valor da parcela.">
+      </mat-form-field>
+
       <mat-form-field>
         <input matInput [matDatepicker]="picker" placeholder="Data de Vencimento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
