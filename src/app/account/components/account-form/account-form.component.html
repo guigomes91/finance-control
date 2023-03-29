@@ -8,7 +8,7 @@
         <input matInput placeholder="Descrição" formControlName="description" #description>
         <mat-hint align="end">{{description.value.length}} / 100</mat-hint>
         <mat-error *ngIf="form.get('description')?.invalid">
-          {{getErrorMessage('name')}}
+          {{getErrorMessage('description')}}
         </mat-error>
       </mat-form-field>
 
@@ -23,13 +23,13 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Data de Vencimento">
+        <input matInput [matDatepicker]="picker" formControlName="due" placeholder="Data de Vencimento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Data de Pagamento">
+        <input matInput [matDatepicker]="picker" formControlName="payment" placeholder="Data de Pagamento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
