@@ -9,7 +9,7 @@ import { Account } from '../model/account/account';
 })
 export class AccountService {
 
-  private readonly API = 'api/account';
+  private readonly API = 'fincontrol/api/account';
 
   constructor(private httpClient: HttpClient) { }
 
